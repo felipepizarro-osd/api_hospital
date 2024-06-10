@@ -1,0 +1,18 @@
+runtime: python311
+
+
+instance_class: F2
+env_variables:
+  # Establece tus variables de entorno aquí
+  FLASK_ENV: .env
+  # Otras variables necesarias para tu aplicación
+
+entrypoint: gunicorn -b :$PORT app:app
+
+# Configuración de los tiempos de espera y escalado
+automatic_scaling:
+  min_instances: 1
+  max_instances: 5
+  target_cpu_utilization: 0.75
+  target_throughput_utilization: 0.75
+

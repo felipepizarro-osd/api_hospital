@@ -1,0 +1,14 @@
+swagger: '2.0'
+info:
+  title: 'API de Cálculo'
+  description: 'Documentación de la API de cálculo'
+  version: '1.0'
+paths:
+  /start_calculation:
+    get:
+      summary: 'Iniciar cálculo'
+      responses:
+        200:
+          description: 'Éxito'
+        500:
+          description: 'Error de servidor'
